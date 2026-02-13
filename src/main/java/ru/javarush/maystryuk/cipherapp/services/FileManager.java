@@ -1,12 +1,12 @@
 package ru.javarush.maystryuk.cipherapp.services;
 
+import ru.javarush.maystryuk.cipherapp.exception.CaesarCipherException;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class FileManager {
-
-    //Считываю файл, получаю текст.
     public static void processFile(String inputFile, String outputFile, int key, boolean encrypt){
         try{
             String content = Files.readString(Paths.get(inputFile));
@@ -14,7 +14,7 @@ public class FileManager {
             Files.writeString(Paths.get(outputFile), result);
 
         }catch (RuntimeException | IOException e){
-            throw new RuntimeException(e);
+            throw new CaesarCipherException("Ошибка файла: " + e);
         }
     }
 }
