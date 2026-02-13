@@ -1,7 +1,10 @@
 package ru.javarush.maystryuk.cipherapp;
 
+import ru.javarush.maystryuk.cipherapp.entitys.CaesarCipher;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        CaesarCipher caesarCipher = new CaesarCipher();
+       // caesarCipher.cipher();
     }
 }
