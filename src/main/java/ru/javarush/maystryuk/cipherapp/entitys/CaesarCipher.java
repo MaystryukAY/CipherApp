@@ -10,7 +10,7 @@ import static ru.javarush.maystryuk.cipherapp.statics.Alphabet.ALPHABET;
 
 public class CaesarCipher {
     //Шифрую или дешифрую файл
-    public void cipher(String inputFile, String outputFile, int key, boolean encrypt){
+    public static void cipher(String inputFile, String outputFile, int key, boolean encrypt){
         FileManager.processFile(inputFile, outputFile, key, encrypt);
     }
 
