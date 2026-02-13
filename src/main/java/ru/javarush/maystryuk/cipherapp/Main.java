@@ -5,6 +5,6 @@ import ru.javarush.maystryuk.cipherapp.entitys.CaesarCipher;
 public class Main {
     public static void main(String[] args) {
         CaesarCipher caesarCipher = new CaesarCipher();
-       // caesarCipher.cipher();
+        caesarCipher.cipher("in.txt", "out.txt", 3, true);
     }
 }

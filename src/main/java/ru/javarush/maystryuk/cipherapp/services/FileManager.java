@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 public class FileManager {
 
     //Считываю файл, получаю текст.
-    public void processFile(String inputFile, String outputFile, int key, boolean encrypt){
+    public static void processFile(String inputFile, String outputFile, int key, boolean encrypt){
         try{
             String content = Files.readString(Paths.get(inputFile));
             String result = TextManager.processText(content, key, encrypt);
