@@ -1,7 +1,10 @@
 package ru.javarush.maystryuk.cipherapp;
 
+import ru.javarush.maystryuk.cipherapp.view.Menu;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello!");
+        Menu menu = new Menu();
+        menu.start();
     }
 }
