@@ -20,7 +20,7 @@ public class CaesarCipher {
 
             for (int key = 0; key < ALPHABET.length; key++) {
                 String decrypted = TextManager.processText(content, key, false);
-                System.out.printf("Ключ %2d: %s\n", key, decrypted.substring(0, Math.min(55, decrypted.length())));
+                System.out.printf("Ключ %2d: %s\n", key, decrypted.substring(0, Math.min(content.length(), decrypted.length())));
             }
 
         } catch (IOException e) {
