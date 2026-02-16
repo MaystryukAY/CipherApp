@@ -10,11 +10,7 @@ import java.nio.file.Paths;
 
 public class CaesarCipher {
     public static void cipher(String inputFile, String outputFile, int key, boolean encrypt){
-        try{
-            FileManager.processFile(inputFile, outputFile, key, encrypt);
-        }catch (RuntimeException e){
-            throw new CaesarCipherException("Ошибка метода шифровки/дешифровки: " + e);
-        }
+        FileManager.processFile(inputFile, outputFile, key, encrypt);
     }
 
     public static void bruteForce(String inputFile) {
@@ -27,7 +23,7 @@ public class CaesarCipher {
             }
 
         } catch (RuntimeException | IOException e) {
-            throw new CaesarCipherException("Ошибка брутфорса: " + e);
+            throw new CaesarCipherException("Ошибка брутфорса", e);
         }
     }
 }
